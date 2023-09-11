@@ -18,7 +18,7 @@ const init = async () => {
 }
 
 process.on('unhandledRejection', (err)=> {
-    console.log(Err)
+    console.log(err);
 }) 
 
 init();
