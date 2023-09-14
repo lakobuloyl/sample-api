@@ -5,8 +5,8 @@ const app = express();
 
 app.use(express.json())
 // Define a route that responds with "Hello, World!"
-app.get("/", ( res) => {
-  res.send("Hello, World!");
+app.get("/", (req, res) => {
+  res.status(200).send({hello:"Hello, World!"});
 });
 
 // Start the server on port 3000
