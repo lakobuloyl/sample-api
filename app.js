@@ -1,10 +1,11 @@
-const express = require("express")();
+const express = require("express");
 
 // Create an Express application
 const app = express();
+
 app.use(express.json())
 // Define a route that responds with "Hello, World!"
-app.get("/", (req, res) => {
+app.get("/", ( res) => {
   res.send("Hello, World!");
 });
 
