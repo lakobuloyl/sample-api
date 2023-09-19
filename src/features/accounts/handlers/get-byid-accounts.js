@@ -1,7 +1,8 @@
 const { userRepositories } = require("../../../service/repositories/index");
 module.exports = async function (req, res) {
   try {
-    let test = await userRepositories.find({});
+    const { query } = req;
+    let test = await userRepositories.finById({ _id: query.userId });
     res.send(test);
   } catch (error) {
     console.log("errr", error);
