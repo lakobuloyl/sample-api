@@ -16,7 +16,7 @@ app.listen(PORT, () => {
 });
 
 app.get("/", function (req, res) {
-  res(200, { msg: "Welcome  new API" });
+  res.status(200).send( { msg: "Welcome  new API" });
 });
 
 const UserRoutes = require("./src/features/accounts/routes/accounts");
