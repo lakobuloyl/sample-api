@@ -9,7 +9,8 @@ module.exports.superAdmin = {
             username,
             password
         )values(
-            v, 
+            
+            "${params.username}", 
             "${params.password}"
         )
         `;

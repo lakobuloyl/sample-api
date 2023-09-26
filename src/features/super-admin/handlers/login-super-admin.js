@@ -12,8 +12,12 @@ module.exports = async function (req, res) {
     let admin = await superAdminRepositories.selectUserName(body);
     let passwordCompare = await comparePass(body.password, admin[0].password)
     if (!passwordCompare) return res.status(309).send({ message: "Password or Email is Incorrect" });
-    let accessToken = await generateAppAccessToken(admin[0]);
-
+      let setToken = {
+        username: admin[0].username,
+        access: "admin",
+      };
+    let accessToken = await generateAppAccessToken(setToken);
+ 
       res.send({ "x-access-token": accessToken });
   } catch (error) {
     console.log("errr", error);

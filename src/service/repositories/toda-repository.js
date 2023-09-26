@@ -13,9 +13,9 @@ module.exports.toda = {
             toda_province
         )values(
             "${params.toda_name}", 
-            "${params.toda_desc}"
-            "${params.toda_brgy}"
-            "${params.toda_city}"
+            "${params.toda_desc}",
+            "${params.toda_brgy}",
+            "${params.toda_city}",
             "${params.toda_province}"
         )
         `;

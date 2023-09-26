@@ -13,7 +13,7 @@ router.get("/v1/driver/id", validateToken, getByIdDriverAccountsHandler);
 router.put("/v1/driver", validateToken, updateDriverAccountsHandler);
 router.post("/v1/driver", validateToken, createDriverAccountsHandler);
 
-git 
+ 
 const loginDriverAccountsHandler = require("../handlers/login-driver");
 const profileDriverAccountsHandler = require("../handlers/driver-profile");
 
